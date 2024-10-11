@@ -1,9 +1,9 @@
 === WP Call Button - Easy Click to Call Button for WordPress ===
 Contributors: Wpbeginner, smub, yanivmasjedi
-Tags: call button, click to call button, call now button, call, phone, clickable phone numbers, call me wordpress plugin, woocommerce call button
+Tags: call button, call now button, call, phone, clickable phone numbers
 Requires at least: 4.9
-Tested up to: 6.6.1
-Stable tag: 1.4.2
+Tested up to: 6.7
+Stable tag: 1.4.3
 Requires PHP: 5.6
 License: GPL-2.0+
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -129,6 +129,9 @@ Yes. You can easily customize the color, text, placement, and everything else re
 Yes. We have the option to only display call now button to mobile users only.
 
 == Changelog ==
+
+= 1.4.3 =
+* Fix the missing CSS/JS assets
 
 = 1.4.2 =
 * WordPress 6.6.1 support.

@@ -100,7 +100,7 @@ const edit = ( { attributes, setAttributes } ) => {
 				<PanelBody>
                     {!wpcallbtn_phone_num && <Notice status="error" isDismissible={false}>
                         <p>{__('Please set the phone number in the global settings.', 'wp-call-button')}</p>
-                        <Button isPrimary isSmall href={settingsUrl}>{__('Go to settings', 'wp-call-button')}</Button>
+                        <Button variant="primary" size="small" href={settingsUrl}>{__('Go to settings', 'wp-call-button')}</Button>
                     </Notice>}
 
                     <hr/>
@@ -110,11 +110,13 @@ const edit = ( { attributes, setAttributes } ) => {
 						onChange={ onFontSizeChange }
 						value={ btnFontSize }
 						disableCustomFontSizes={ true }
+						__next40pxDefaultSize={ true }
 					/>
 					<ToggleControl
 						checked={ hidePhoneIcon }
 						onChange={ onCheckBoxControlChange }
 						label={ __( 'Hide phone icon?', 'wp-call-button' ) }
+						__nextHasNoMarginBottom={ true }
 					/>
 					<ToggleControl
 						checked={ btnCenterAlign }
@@ -123,6 +125,7 @@ const edit = ( { attributes, setAttributes } ) => {
 							'Center align call button?',
 							'wp-call-button'
 						) }
+						__nextHasNoMarginBottom={ true }
 					/>
 				</PanelBody>
 				<PanelColorSettings
@@ -167,7 +170,7 @@ const edit = ( { attributes, setAttributes } ) => {
 						tagName="span"
 						onChange={ onChangeContent }
 						value={ btnText }
-						formattingControls={ [] }
+						allowedFormats={ [] }
 						multiline={ false }
 					/>
 				</span>

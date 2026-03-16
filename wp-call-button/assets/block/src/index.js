@@ -6,6 +6,7 @@ import { registerBlockType } from '@wordpress/blocks';
 import { __ } from '@wordpress/i18n';
 
 registerBlockType( 'wp-call-button/wp-call-button-block', {
+	apiVersion: 3,
 	title: __( 'WP Call Button', 'wp-call-button' ),
 	description: __(
 		'Adds a clickable phone link (quick call button), so people can easily call your business phone.',

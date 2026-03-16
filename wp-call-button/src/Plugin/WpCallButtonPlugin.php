@@ -68,9 +68,6 @@ class WpCallButtonPlugin {
 		// but we will skip it, just because.
 		add_action( 'wp_head', [ $this, 'print_call_button_styles' ] );
 
-		// Load text domain.
-		add_action( 'plugins_loaded', [ $this, 'load_textdomain' ] );
-
 		// Setup the Call button widget.
 		add_action( 'widgets_init', [ $this, 'register_widgets' ] );
 
@@ -466,12 +463,5 @@ class WpCallButtonPlugin {
 			// phpcs:ignore
 			echo '<a class="' . esc_attr( $this->plugin_slug ) . '" href="tel:' . esc_attr( $settings['wpcallbtn_phone_num'] ) . '"' . $click_tracking . '>' . $call_button_text . '</a>';
 		}
-	}
-
-	/**
-	 * Load the text domain.
-	 */
-	public function load_textdomain() {
-		load_plugin_textdomain( $this->plugin_slug, false, dirname( plugin_basename( WP_CALL_BUTTON_FILE ) ) . '/languages/' );
 	}
 }
